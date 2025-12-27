@@ -1,0 +1,140 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #0f172a;
+  --foreground: #f8fafc;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  background: var(--background);
+  color: var(--foreground);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1e293b;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #5546ff;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #7c6fff;
+}
+
+/* Glowing effect for buttons */
+.glow-purple {
+  box-shadow: 0 0 20px rgba(85, 70, 255, 0.4),
+              0 0 40px rgba(85, 70, 255, 0.2);
+}
+
+.glow-gold {
+  box-shadow: 0 0 20px rgba(247, 147, 26, 0.4),
+              0 0 40px rgba(247, 147, 26, 0.2);
+}
+
+/* Animated gradient background */
+.animated-gradient {
+  background: linear-gradient(-45deg, #0f172a, #1e1b4b, #0f172a, #1a1a2e);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Grid pattern overlay */
+.grid-pattern {
+  background-image: 
+    linear-gradient(rgba(85, 70, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(85, 70, 255, 0.03) 1px, transparent 1px);
+  background-size: 50px 50px;
+}
+
+/* Cyber-secure card style */
+.cyber-card {
+  background: linear-gradient(180deg, rgba(30, 41, 59, 0.8) 0%, rgba(15, 23, 42, 0.9) 100%);
+  border: 1px solid rgba(85, 70, 255, 0.2);
+  backdrop-filter: blur(10px);
+}
+
+.cyber-card:hover {
+  border-color: rgba(85, 70, 255, 0.5);
+  box-shadow: 0 0 30px rgba(85, 70, 255, 0.15);
+}
+
+/* Progress bar glow */
+.progress-glow {
+  box-shadow: 0 0 10px currentColor, 0 0 20px currentColor;
+}
+
+/* Input focus styles */
+input:focus, textarea:focus {
+  outline: none;
+  border-color: #5546ff !important;
+  box-shadow: 0 0 0 3px rgba(85, 70, 255, 0.2);
+}
+
+/* Button hover states */
+.btn-primary {
+  @apply bg-stacks-purple hover:bg-stacks-purple-light transition-all duration-300;
+}
+
+.btn-primary:hover {
+  box-shadow: 0 0 20px rgba(85, 70, 255, 0.5);
+}
+
+.btn-gold {
+  @apply bg-bitcoin-gold hover:bg-bitcoin-gold-light transition-all duration-300;
+}
+
+.btn-gold:hover {
+  box-shadow: 0 0 20px rgba(247, 147, 26, 0.5);
+}
+
+/* Capsule status badges */
+.badge-open {
+  @apply bg-status-open/20 text-status-open border border-status-open/30;
+}
+
+.badge-claimed {
+  @apply bg-status-claimed/20 text-status-claimed border border-status-claimed/30;
+}
+
+.badge-locked {
+  @apply bg-status-locked/20 text-status-locked border border-status-locked/30;
+}
+
+/* Number input arrows removal */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+

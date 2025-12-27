@@ -1,0 +1,53 @@
+# Dependencies
+node_modules/
+.pnpm-store/
+
+# Next.js
+frontend/.next/
+frontend/out/
+
+# Production
+frontend/build/
+dist/
+
+# Environment files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+*.env
+
+# Debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Misc
+.DS_Store
+*.pem
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# TypeScript
+*.tsbuildinfo
+next-env.d.ts
+
+# Clarinet
+contracts/.cache/
+contracts/history.txt
+contracts/.clarinet/
+
+# Testing
+coverage/
+.nyc_output/
+
+# Vercel
+.vercel
+
